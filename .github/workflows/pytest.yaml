@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          export PATH="$HOME/.cargo/bin:$PATH"
-          uv pip install .
+          export PATH="$HOME/.local/bin:$PATH"
+          uv pip install --system .
 
       - name: Run Pytest
         run: pytest
